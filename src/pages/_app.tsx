@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app'
 import { AlertsProvider } from '../contexts/AlertsProvider'
 import { Layout } from '../layouts/Layout'
 import { useEffect } from 'react'
-import { UserInfoProvider } from '../contexts/UserInfoProvider'
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -12,11 +11,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AlertsProvider>
-      <UserInfoProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </UserInfoProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </AlertsProvider>
   )
 }
