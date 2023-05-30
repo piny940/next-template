@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import styles from '../../styles/navbar.module.scss'
 
-export interface NavbarProps {
-
-}
+export interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = () => {
   return (
