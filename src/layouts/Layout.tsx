@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import { Alerts } from './Alerts'
 import { Navbar } from './Navbar'
 import styles from '../../styles/layout.module.scss'
 
@@ -17,10 +16,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header id={styles.header}>
         <Navbar />
       </header>
-      <main>
-        <Alerts />
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   )
 }
