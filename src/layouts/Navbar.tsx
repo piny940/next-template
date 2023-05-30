@@ -1,11 +1,7 @@
 import Link from 'next/link'
 import styles from '../../styles/navbar.module.scss'
 
-export interface NavbarProps {
-
-}
-
-export const Navbar: React.FC<NavbarProps> = () => {
+export const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand navbar-dark bg-dark">
       <div className="container-fluid px-5">
