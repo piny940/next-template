@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
       <div className="container-fluid px-5">
         <Link href="/">
           <h1 className="navbar-brand" id={styles.title}>
-            Clubroom
+            Next Template
           </h1>
         </Link>
       </div>
