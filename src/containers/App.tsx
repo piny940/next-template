@@ -1,3 +1,11 @@
+import { useTheme } from '@/context/ThemeProvider'
+
 export const App: React.FC = () => {
-  return <div id="app">Next template</div>
+  const { theme } = useTheme()
+
+  return (
+    <div data-bs-theme={theme} id="app">
+      Next template
+    </div>
+  )
 }
