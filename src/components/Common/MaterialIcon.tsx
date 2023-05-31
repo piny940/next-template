@@ -6,6 +6,7 @@ export interface MaterialIconProps {
   name: string
   className?: string
   refObj?: RefObject<HTMLSpanElement>
+  testID?: string
 }
 
 export const MaterialIcon: React.FC<MaterialIconProps> = ({
@@ -13,12 +14,14 @@ export const MaterialIcon: React.FC<MaterialIconProps> = ({
   name,
   className = '',
   refObj,
+  testID,
 }) => {
   return (
     <span
       style={{ color }}
       className={toClass('material-icons', className)}
       ref={refObj}
+      data-testid={testID}
     >
       {name}
     </span>
