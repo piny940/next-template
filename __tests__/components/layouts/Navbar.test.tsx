@@ -4,7 +4,7 @@ import { Navbar } from '@/layouts/Navbar'
 import { TestID } from '@/resources/TestID'
 
 describe('<Navbar />', () => {
-  it('Navbarを正常に表示できる', async () => {
+  it('正常に描画される', async () => {
     const { getByTestId } = render(<Navbar />)
 
     await waitFor(() => {
