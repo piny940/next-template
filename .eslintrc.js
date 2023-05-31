@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
