@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/bootstrap": "^5.2.6",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
@@ -40,6 +41,7 @@
     "node-sass": "^9.0.0",
     "prettier": "^2.8.8",
     "sass": "^1.62.1",
+    "ts-mockery": "^1.2.0",
     "typescript": "5.0.4"
   }
 }
