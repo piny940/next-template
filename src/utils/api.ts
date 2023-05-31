@@ -38,32 +38,19 @@ export const postData = async (params: {
     method: 'POST',
     data: params.scope ? { [params.scope]: params.data } : params.data,
   })
-  const json = await response.json()
 
-  if (response.status >= 400) {
-    params.onFail(json)
-  } else {
-    params.onSuccess(json)
-  }
+  return await response.json()
 }
 
 export const updateData = async (params: {
   url: string
   data: object
   scope?: string
-  onSuccess: (json: any) => void
-  onFail: (json: any) => void
 }) => {
   const response = await fetchApi({
     url: params.url,
     method: 'PATCH',
     data: params.scope ? { [params.scope]: params.data } : params.data,
   })
-  const json = await response.json()
-
-  if (response.status >= 400) {
-    params.onFail(json)
-  } else {
-    params.onSuccess(json)
-  }
+  return await response.json()
 }
