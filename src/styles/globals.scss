@@ -33,6 +33,13 @@ nav .title {
   margin: 0;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  border-style: inherit;
+}
+
 // メインカラー
 $main: rgb(20, 214, 182);
 .text-main {

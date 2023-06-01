@@ -1,0 +1,27 @@
+import { useTheme } from '@/context/ThemeProvider'
+import { Theme } from '@/resources/types'
+import Image from 'next/image'
+import { MouseEventHandler } from 'react'
+
+export type ProfileButtonProps = {
+  onClick: MouseEventHandler
+  size?: number
+  theme: Theme
+}
+
+export const ProfileButton: React.FC<ProfileButtonProps> = ({
+  onClick,
+  size = 35,
+}) => {
+  const { theme } = useTheme()
+
+  const src =
+    theme === 'light'
+      ? '/images/default_account_icon_black.png'
+      : '/images/default_account_icon_white.png'
+  return (
+    <button type="button" onClick={onClick}>
+      <Image width={size} height={size} src={src} alt="profile icon" />
+    </button>
+  )
+}

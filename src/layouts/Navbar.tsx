@@ -1,3 +1,4 @@
+import { ProfileButton } from '@/components/Navbar/ProfileButton'
 import { TestID } from '@/resources/TestID'
 import Link from 'next/link'
 
@@ -11,6 +12,7 @@ export const Navbar: React.FC = () => {
         <Link href="/">
           <div className="navbar-brand title fw-bold">Next Template</div>
         </Link>
+        <ProfileButton theme="dark" onClick={() => undefined} />
       </div>
     </nav>
   )
