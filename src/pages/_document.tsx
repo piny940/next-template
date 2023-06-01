@@ -4,7 +4,6 @@ function Document() {
   return (
     <Html>
       <Head>
-        <meta content="width=device-width,initial-scale=1" name="viewport" />
         <meta content="text/html; charset=UTF-8" httpEquiv="Content-Type" />
         <meta content="Next Template" name="keywords" />
         <link rel="icon" href="/favicon.ico" />
