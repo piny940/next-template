@@ -3,7 +3,7 @@
 const BACKEND =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'https://clubroom-backend.fly.dev'
+    : 'https://example.com'
 
 const nextConfig = {
   reactStrictMode: true,
