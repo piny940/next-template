@@ -28,16 +28,37 @@ a {
   }
 }
 
-body {
-  background: rgb(242, 242, 242);
+nav .title {
+  font-size: 1.55rem;
+  margin: 0;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }
+// メインカラー
+$main: rgb(20, 214, 182);
+.text-main {
+  color: $main !important;
+}
+.bg-main {
+  background-color: $main !important;
+}
+.border-main {
+  border-color: $main !important;
+}
+.btn-main {
+  background-color: $main !important;
+  border-color: $main !important;
+  color: white !important;
+}
+.btn-outline-main {
+  color: $main !important;
+  border-color: $main !important;
+  background-color: white !important;
+}
+
+.title-border-main,
+h1 {
+  border-left: 8px solid $main;
+  border-bottom: 2px solid $main;
+  padding: 4px 16px;
+  margin-bottom: 16px !important;
+}
