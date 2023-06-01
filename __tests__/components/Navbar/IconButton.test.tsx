@@ -1,20 +1,17 @@
-import {
-  ProfileButton,
-  ProfileButtonProps,
-} from '@/components/Navbar/ProfileButton'
+import { IconButton, IconButtonProps } from '@/components/Navbar/IconButton'
 import { TestID } from '@/resources/TestID'
 import { expect } from '@jest/globals'
 import { act, fireEvent, render, waitFor } from '@testing-library/react'
 import { Mock } from 'ts-mockery'
 
-describe('<ProfileButton />', () => {
+describe('<IconButton />', () => {
   it('正常に描画される', async () => {
     const onClick = jest.fn()
-    const props = Mock.from<ProfileButtonProps>({
+    const props = Mock.from<IconButtonProps>({
       onClick: onClick,
     })
 
-    const { getByTestId } = render(<ProfileButton {...props} />)
+    const { getByTestId } = render(<IconButton {...props} />)
 
     await waitFor(() => {
       expect(getByTestId(TestID.PROFILE_BUTTON)).toBeTruthy()

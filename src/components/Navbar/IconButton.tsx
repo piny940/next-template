@@ -4,13 +4,13 @@ import { Theme } from '@/resources/types'
 import Image from 'next/image'
 import { MouseEventHandler } from 'react'
 
-export type ProfileButtonProps = {
+export type IconButtonProps = {
   onClick: MouseEventHandler
   size?: number
   theme: Theme
 }
 
-export const ProfileButton: React.FC<ProfileButtonProps> = ({
+export const IconButton: React.FC<IconButtonProps> = ({
   onClick,
   size = 35,
 }) => {
