@@ -1,4 +1,4 @@
-# Rails Template
+# Next Template
 
 [English version](https://github.com/piny940/next-template/blob/main/README.en.md)
 
