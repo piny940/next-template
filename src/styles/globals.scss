@@ -81,3 +81,7 @@ h1 {
   margin-bottom: 16px !important;
   font-weight: 500;
 }
+[data-bs-theme='dark'] {
+  --bs-body-color-rgb: 210, 210, 210 !important;
+  --bs-body-color: #dddddd !important;
+}
