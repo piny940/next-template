@@ -1,10 +1,16 @@
-import { IconButton } from '@/components/Navbar/IconButton'
+import { ThemeToggler } from '@/components/Common/ThemeToggler'
 import { useTheme } from '@/context/ThemeProvider'
 import { TestID } from '@/resources/TestID'
 import Link from 'next/link'
+import { useCallback } from 'react'
 
 export const Navbar: React.FC = () => {
-  const { theme } = useTheme()
+  const { theme, setTheme } = useTheme()
+  const toggleTheme = useCallback(() => {
+    return () => {
+      setTheme(theme === 'light' ? 'dark' : 'light')
+    }
+  }, [theme])
 
   return (
     <nav
@@ -21,7 +27,7 @@ export const Navbar: React.FC = () => {
         >
           <div>Next Template</div>
         </Link>
-        <IconButton theme="dark" onClick={() => undefined} />
+        <ThemeToggler theme={theme} toggleTheme={toggleTheme()} />
       </div>
     </nav>
   )
