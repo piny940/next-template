@@ -3,6 +3,7 @@ services:
     build:
       context: .
     image: next-template
+    container_name: next-template
     ports:
       - '3001:3001'
     volumes:
