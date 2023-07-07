@@ -1,6 +1,13 @@
-FROM node:18.12-alpine
+FROM node:18-alpine
 
-WORKDIR /app/
+WORKDIR /app
 
-COPY ./package.json ./
-RUN yarn install
+COPY . .
+RUN if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+    else echo "Warning: Lockfile not found. It is recommended to commit lockfiles to version control." && yarn install; \
+    fi \
+    && chown -R node:node .
+
+USER node
+
+CMD echo $USER && yarn dev
