@@ -5,9 +5,6 @@ WORKDIR /app
 COPY . .
 RUN if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
     else echo "Warning: Lockfile not found. It is recommended to commit lockfiles to version control." && yarn install; \
-    fi \
-    && chown -R node:node .
+    fi
 
-USER node
-
-CMD echo $USER && yarn dev
+CMD ["yarn", "dev"]
